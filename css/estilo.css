@@ -1,0 +1,468 @@
+:root{
+    --blue:#207dff;
+    --dgreen:#00bd56;
+    --lgreen:#85ef47;
+    --yellow:#f9fd50;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #fff;
+    overflow-x: hidden;
+    font-family: 'Raleway', sans-serif;
+}
+/**Ir arriba**/
+.go-top{
+    position: fixed;
+    bottom: 100px;
+    right: -100%;
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--blue);
+    background: #fff;
+    z-index: 9999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 400ms;
+}
+.go-top:hover{
+    border: 2px solid var(--yellow);
+    background: var(--blue);
+}
+.go-top:hover span{
+    color: var(--yellow);    
+}
+
+.go-top > span{
+    font-size: 30px;
+    color: var(--dgreen);
+
+}
+
+
+
+/**Ir arriba**/
+
+
+
+/**Menu de navegacion**/
+#header{
+    position: relative;
+    width: 100%;
+}
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #fff;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+}
+.menu .logo-box{
+    margin-left: 20px;
+}
+.menu .logo-box h1 a{
+    text-decoration: none;
+    font-size: 35px;
+    font-weight: 400;
+    color: var(--dgreen);
+}
+.menu .list-container{
+    margin-right: 20px;
+}
+.menu .list-container .lists{
+    display: flex;
+}
+.menu .list-container .lists li{
+    list-style: none;
+    font-weight: 750;
+}
+.menu .list-container .lists li a{
+    text-decoration: none;
+    margin: 0px 10px;
+    padding: 8px;
+    color: var(--dgreen);
+    border-radius: 24px;
+    font-size: 16px;
+    transition: 0,3s;
+}
+
+.menu .list-container .lists li a.activo{
+    background: var(--blue);
+    color: #fff;
+}
+.menu .list-container .lists li a:hover{
+    background: var(--blue);
+    color: #fff;
+}
+.menu .list-container .lists li a.activo:hover{
+    background: var(--lgreen);
+    color: #fff;
+}
+.btn-menu >.fa-bars{
+    display: none;
+}
+
+ 
+/**Menu de navegacion**/
+
+/**IMG header**/
+.img-cabezota{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../imagenes/cabezota.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.img-cabezota .welcome{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.img-cabezota .welcome h1{
+    font-size: 50px;
+    color: #fff;
+    font-weight: 200;
+}
+.img-cabezota .welcome hr{
+    width: 400px;
+    height: 2px;
+    background: #fff;
+    border: none;
+    margin-top: 5px;
+
+}
+.img-cabezota .welcome p{
+    font-size: 20px;
+    color: #fff;
+    margin-top: 20px;
+}
+.img-cabezota .welcome > button{
+    width: 170px;
+    height: 40px;
+    background: var(--blue);
+    border-radius: 24px;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.img-cabezota .welcome > button:hover{
+    background: var(--lgreen);
+    transition: 0,2s;
+}
+/**IMG header**/
+
+/**Que es**/
+.que-es{
+    width: 100%;
+    margin-top: 120px;
+}
+.que-es .info-container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.que-es .info-container h1{
+    font-size: 50px;
+    font-weight: 400;
+    color: var(--dgreen);
+    text-align: center;
+    margin-bottom: 20px;
+}
+.que-es .info-container p{
+    font-weight: 700;
+    text-align: justify;
+    font-size: 17px;
+    color: var(--dgreen);
+    margin: 10px 0px;
+}
+.que-es .info-container p.activo{
+    font-weight: 700;
+    text-align: justify;
+    font-size: 17px;
+    color: var(--dgreen);
+    margin: 10px 0px;
+    text-indent: 3em;
+
+}
+.que-es .info-container .about-gallery{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0px; 
+}
+.que-es .info-container .about-gallery img{
+    width: calc(33,3% - 10px);
+    height: 300px;
+    object-fit: cover;
+    margin: 10px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.que-es .info-container .about-more{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.que-es .info-container .about-more button{
+    width: 170px;
+    height: 40px;
+    background: var(--blue);
+    border-radius: 24px;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.que-es .info-container .about-more button:hover{
+    background: var(--lgreen);
+}
+
+/**Que es**/
+
+/**Mejores Inventos**/
+.best-invention{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(../imagenes/background.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    margin-top: 100px;
+}
+.best-invention .deg-background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+.best-invention .ejeZinvention{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.best-invention .container-invention{
+    width: 90%;
+    margin: auto;
+    padding-top: 100px;
+}
+.best-invention .container-invention .invention-title{
+    border: 2px solid #fff;
+    padding: 10px;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+.best-invention .container-invention .invention-title h2{
+    font-size: 40px;
+    color: #fff;
+    font-weight: normal;
+}
+.best-invention .container-invention .invention-title hr{
+    background: #fff;
+    width: 50%;
+    margin: 10px auto;
+}
+
+.best-invention .container-invention .invention-img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    padding-bottom: 100px;
+}
+.best-invention .container-invention .invention-img img{
+    width: calc(30%-10px);
+    margin: 10px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;  
+    max-width: 300px;
+    max-height: 250px; 
+}
+/**Mejores Inventos**/
+/**Contacto**/
+.contacto{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(../imagenes/background.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    margin-top: 25px;
+}
+.contacto .beg-background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+.contacto .ejeZcontacto{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.contacto .contacto-container{
+    width: 90%;
+    margin: auto;
+    padding-top: 100px;
+}
+.contacto .contacto-container .contacto-title{
+    border: 2px solid #fff;
+    padding: 10px;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+.contacto .contacto-container .contacto-title h2{
+    font-size: 40px;
+    color: #fff;
+    font-weight: normal;
+}
+.contacto .contacto-container .contacto-title hr{
+    background: #fff;
+    width: 50%;
+    margin: 10px auto;
+}
+
+.contacto .redes-buttons{
+    justify-content: center;
+    color: var(--dgreen);
+    border: #f9fd50;
+
+}
+.contacto .redes-buttons a{
+    width: calc(100px - 10px);
+    height: 300px;
+    object-fit: cover;
+    margin: 10px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: rgb(124, 124, 124);
+    align-items: center;
+}
+.contacto .contacto-img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    padding-bottom: 50px;
+}
+.contacto .contacto-img a{
+    width: calc(30%-10px);
+    margin: 10px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;  
+    max-width: 300px;
+    max-height: 250px; 
+}
+.contacto .contacto-img img{
+    width: 100px;
+    height: 100px;
+}
+
+
+.contacto .ejeZcontacto .fin{
+    background: rgba(0, 0, 0, 1);
+    color: var(--yellow);
+    text-align: center;
+}
+/**Contacto**/
+
+
+/**Media Quary*/
+
+@media only screen and (max-width:900px){
+    .btn-menu >.fa-bars{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 28px;
+    }
+    .btn-menu > .fa-bars:hover{color: var(--blue);}
+    .btn-menu > .fa-times:hover{color: var(--blue);}
+    .menu .list-container{
+        position: absolute;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background: #fff;
+    }
+    .menu .list-container .lists{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-top: 5px solid var(--blue);
+
+    }
+    .menu .list-container .lists li{
+        width: 90%;
+        margin: 10px 0px;
+        border-bottom: 1px solid var(--blue);
+        text-align: center;
+    }
+    .menu .list-container .lists li a{
+        font-size: 20px; 
+    }
+    .menu .list-container .lists li a.activo{
+        background: none;
+        color: var(--blue);
+        
+    }   
+    .menu .list-container .lists li a:hover{
+        background: none;
+        color: var(--blue);
+    }
+    
+    
+}
+
+/**Media Quary*/
